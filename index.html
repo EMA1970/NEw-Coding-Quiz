@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Quiz</title>
+    <!--link for normalize reset-->
+
+    <!--link for stylesheet -->
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <!-- llink for fontawesome-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <!-- main outer div for body content -->
+    <section class="quiz-content" id-="container">
+        <!--quiz start button -->
+        <div class="btn_start" id="start">Start </div>
+        <!-- quiz guide section   -->
+        <div class="quiz_guide">
+            <h2> Instructions</h2>
+            <h4>1. Answer questions within time limit.</h4>
+            <h4>2. Answers cannot be unselected.</h4>
+            <h4>3. Each correct answer counts as a point.</h4>
+            <h4>4. Have fun !!</h4>
+            <div class="buttons">
+                <button class="exit" id="exitBtn">Exit</button>
+                <button class="continue" id="contBtn">Continue</button>
+            </div>
+        </div>
+
+
+        <!-- quiz section   -->
+        <div class="quiz" id="quiz">
+            <!--quiz heading-->
+            <div class="quiz_header" id="quizHeader">
+                <h5>Smooth Brained Coding Quiz </h5>
+                <!--quiz timer-->
+                <div class="timer" id="quiz_timer">
+                    <h6>Time Left</h6>
+                    <h6 class="time" id="time">00</h6>
+                </div>
+            </div>
+
+            <!-- quiz questions   -->
+
+            <div class="questions" id="quizQs">
+                <h2 class="questionNumb" id="questionNo">1.</h2>
+                <h2 class="questionText" id="questionText">HTML Stands For</h2>
+            </div>
+
+            <!-- quiz choices -->
+
+            <div class="optionList">
+                <h4 class="choice_que" id="option1">HyperLinks and Text Markeup Language</h4>
+                <h4 class="choice_que" id="option2">HyperText Markup Language</h4>
+                <h4 class="choice_que" id="option3">Hyper text Marking Language</h4>
+                <h4 class="choice_que" id="option4">Hyper Text Mark Language</h4>
+            </div>
+
+            <div class="quiz_ans" id="answerSection">
+                <h3 id="total_correct">3 of 12 Questions</h3>
+                <h3 class="next_question">Next</h3>
+            </div>
+        </div>
+        <!-- quiz results -->
+        <div class="result" id="result">
+            <i class="uil uil-trophy"></i>
+            <h6> Quiz Completed ! </h6>
+            <h6 id="points">You scored 4 out of 10 </h6>
+            <!-- quit button-->
+            <button id="quit">Quit</button>
+            <button id="startAgain">Start Again</button>
+
+        </div>
+
+    </section>
+    <script src="/assets/script.js"></script>
+</body>
+
+
+</html>

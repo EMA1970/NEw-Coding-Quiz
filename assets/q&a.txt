@@ -1,0 +1,68 @@
+In Java, a method is a container that holds classes.
+    True 
+    False 
+
+<h1>Text</h1> is the correct way of making a header in HTML.
+    True 
+    False 
+
+What does REST stand for 
+    Representational State Transfer <x)
+    Representational State Text 
+    Resting Estate State Test 
+    Repo Establishsment State Transfer 
+
+What are the five elements that support media HTML5 
+    <audio> <video> <source> <embed> <track> (x)
+    <audio> <vr> <src> <emmm> <trc> 
+    <audiotory> <visual> <script> <transformstream> <etc> 
+    <alert> <auditory> <video> <source> <embed> 
+
+What is SVG and why is it used? 
+    Scalable Vector Graphics, used to display vector-based graphics over the web.
+    Scalable Video Graphics, used to display videos of high quality. 
+    Scalable Vectoring Gif, used to display vector-based animated gifs. 
+    Scalable Vicious Girl, used to fend off ex-girlfriends snooping. 
+
+What is the use of Canvas in HTML 
+    Canvas allows users to draw graphics on the go using Javascript. There are variety of methods for drawing paths, circles, boxes, images, and more. (x)
+    Canvas is method allowing users to insert a logo or graphics. 
+    Canvas is used by developers to make wireframes for collaboration.
+    Canvas allows users to draw graphics using CSS.
+
+Explain what the difference is between cookies and local storage 
+    Cookies: data accessible both at client side and server side. The data is sent ot he serverside with every cookie request; Local Storage is only at the lcoal browser side data and server cannot use local storage until deliberately sent a requeset to thes erver via POST or GET. (x)
+    Cookies are larger in size and capacity
+    Cookies does not have an expiration date and the data is permanetly stored without deletion. Local storage has an expiration date. 
+    Cookies have an expiration date and the cookies gets deleted over time, while local browser data can only be removed by the server-side.
+
+How do you differentiate between ID and Class selector? 
+    An ID is only used to identify one single element in our HTML. (x)
+    Class is used to for styling 
+    They are the same 
+    Class is more flexible and is often used for Javascript as an element selector. 
+
+What is the difference bween undefined value and null? 
+    The undefined value is a primitive value used when a varaible has not been assigned a value. The null value is a primitive value that represents the null, empty, or non-existent reference. (x)
+    Null is when a variable has been proven false. 
+    Undefined Value is the marker of a global variable.
+    Null Object is undefined but undefined value cannot be null. 
+
+What is the difference between HTML and XHTML? 
+    HTML are not case sensitive, allows overlapping and XHTML only allows lowercase tags does not allow overlapping text. (x)
+    There is no difference. 
+    Only HTMl supports multimedia, styling, and scripting. 
+    XHTML is an older version of HTML5. 
+
+How do you differentiate adaptive and responsive designs? 
+    Adaptive design equires the creation of a different layout for each device the website will be accessed on; Resopnsive design can change its layout and appearance based on thes creen size of the device its accessed on. 
+    There is no difference, they are just different names. 
+    Responsive designs are created by web development and adaptive designs are only by ScrumMasters. 
+    Adaptive designs are a part of the responsive design developmental process. 
+
+What differentiates a span element and a div 
+    Div element is used for block-leel organization and styling of page elements, whereas a span element is used for inline orgnization and styling. (x)
+    Div can be used to wrap a section. Span does not allow wrapping of words or sections. 
+    Div can be used supports CSS, HTML and script use while span does not. 
+    Div is more preferred and can be used to stylise text. 
+    
