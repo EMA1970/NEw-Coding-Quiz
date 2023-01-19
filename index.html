@@ -7,47 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Quiz</title>
     <!--link for normalize reset-->
+    <!-- llink for fontawesome-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--link for stylesheet -->
     <link rel="stylesheet" href="/assets/style/style.css">
-    <!-- llink for fontawesome-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body>
     <!-- main outer div for body content -->
-    <section class="quiz-content" id-="container">
-        <!--quiz start button -->
-        <div class="btn_start" id="start">Start </div>
-        <!-- quiz guide section   -->
-        <div class="quiz_guide">
-            <h2> Instructions</h2>
-            <h4>1. Answer questions within time limit.</h4>
-            <h4>2. Answers cannot be unselected.</h4>
-            <h4>3. Each correct answer counts as a point.</h4>
-            <h4>4. Have fun !!</h4>
-            <div class="buttons">
-                <button class="exit" id="exitBtn">Exit</button>
-                <button class="continue" id="contBtn">Continue</button>
-            </div>
-        </div>
-
+    <section class="container" >
 
         <!-- quiz section   -->
         <div class="quiz" id="quiz">
             <!--quiz heading-->
             <div class="quiz_header" id="quizHeader">
-                <h5>Smooth Brained Coding Quiz </h5>
+                <h5>The Cool Coding Quiz </h5>
 
                 <!--quiz timer-->
                 <div class="timer" id="quiz_timer">
-                    <h6>Time Left</h6>
-                    <h6 class="time" id="time">00</h6>
+                    <h6><a href="highscores.html"> Highscores </a> </h6>
+                    <div class="time"></div>
                 </div>
                 <!-- TODO: high scores -->
-                <a href="highscores.html">View Highscores </a>
 
             </div>
+
+            <div class="quiz_guide hide">
+                <h4>1. Answer questions within time limit.</h4>
+                <h4>2. Answers cannot be unselected.</h4>
+                <h4>3. Each correct answer counts as a point.</h4>
+                <h4>4. Have fun !!</h4>
+                <button class="startbtn"> Start </button>
+            </div>
+        
 
             <!-- quiz questions   -->
 
@@ -60,7 +53,7 @@
 
             <!-- <div class="optionList">
                 <h4 class="choice_que" id="option1">HyperLinks and Text Markeup Language</h4>
-                <h4 class="choice_que" id="option2">HyperText Markup Language</h4>
+                <h4 class="choice_que" id="option2">Hyp  erText Markup Language</h4>
                 <h4 class="choice_que" id="option3">Hyper text Marking Language</h4>
                 <h4 class="choice_que" id="option4">Hyper Text Mark Language</h4>
             </div>

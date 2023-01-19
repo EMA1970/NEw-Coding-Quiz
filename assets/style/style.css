@@ -21,34 +21,41 @@ body {
     background: #ffb049
 }
 
-.quiz-content {
+a {
+    text-decoration: none;
+    color: #f8eee3;
+    font-family: Radjdhan;
+  }
+
+.container {
     height: auto;
     width: auto;
 }
 
-/* ============================             start section           ============================ */ 
-/* style for start button for start button - box size, align text, set color and font, border, and cursor, */
-.btn_start {
-    height: 70px;
-    width: 250px;
-    text-align: center;
-    padding: 20px 0;
-    background: #1e4558;
+/* ============================             header section container styling       ============================ */ 
+.quiz_header {
+    height: 70px; 
+    width: auto; 
+    background: #D52027;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    padding: 10px;
+    display: flex; 
+    align-items: center;
+    /* elements will be placed left to right in a row */  
+    flex-direction: row; 
+    /* which means the top-left corner and bottom-left corner of the targeted element will have a radius of 30 pixels, while the top-right and bottom-right corners will have a radius of 0 pixels, resulting in a semi-circular shape. */
+    border-radius: 30px 0px;
+}
+.quiz_header h5 
+{
+    font-size: 2.12rem;
+    margin: 0 20px; 
     color: #f8eee3;
-    font-size: 23px;
-    font-family: 'Permanent Marker', cursive;
-    font-weight: 700;
-    border-radius: 30px 10px;
-    border: 2px ridge #f8eee3;
-    cursor: pointer;
-    /* display: none; */
 }
 
-/* hover color change for start button  */
-.btn_start:hover {
-    background: #D52027;
-    color: #ffb049;
-}
+
 
 /* ============================             Guide section           ============================ */ 
 
@@ -56,58 +63,41 @@ body {
 .quiz_guide, .quiz 
 {
     height: auto;
-    width: 580px;
+    width: auto;
     padding: 20px;
     background: #f8eee3;
     border-radius: 30px 10px;
     border: 2px solid #f8eee3;
-    color: #f8eee3;
-    display: none; 
+    color: #D52027;
+    /* display: block; */
+    /* display: none;  */
 }
-/* styles for the instruction headline for color a=nd size */
-div.quiz_guide h2 {
-    font-size: 3rem;
-    color: #ffb049;
+
+.quiz_guide {
+    margin: 50px
 }
 
 /* styles for the instruction text */
 div.quiz_guide h4 {
-    height: 50px;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
 }
-
-/* settings for the div continaining both buttons -> container size, display setting and text alignment  */
-.quiz_guide .buttons {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-
+/* styling for button */ 
+.startbtn {
+    margin-top: 30px;
+    width: 300px;
+    height: 100px;
+    background: #ffb049;
+    color: #f8eee3;
+    font-size: 35px;
+    font-family: 'Rajdhani';
+    border: 2px dotted #D52027;
+    box-shadow: #D52027;
 }
 
-/* style settings for buttons to exit or continue after instructions - box size, margin for spacing, border settings, font size and cursor */
-.quiz_guide .buttons button {
-    height: 50px;
-    width: 120px;
-    margin: 10px 25px;
-    border: none; 
-    outline: none;
-    color: #ffb049;
-    background: #D52027;
-    border: 1px solid #f8eee3;
-    border-radius: 20px 5px;
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-
-/* Select the last button in the div  */
-.quiz_guide .buttons button:last-child {
-    margin: 10px 0;
-    
-}
 
 /* ============================             quiz section           ============================ */ 
 /* style for quiz container container */ 
@@ -120,30 +110,7 @@ div.quiz_guide h4 {
 }
 
 /*Styling for quiz header container size, color, and poisitioning */
-.quiz .quiz_header {
-    height: 70px; 
-    width: auto; 
-    background: #D52027;
-    position: absolute;
-    top: 0;
-    left: 0; 
-    /* sets the display property of the targeted element to "flex" which makes it a flex container, allowing its child elements to be positioned along a main axis and a cross axis. */
-    display: flex; 
-    /* sets the alignment of the child elements along the cross axis of the flex container */
-    align-items: center;
-    /* elements will be placed left to right in a row */  
-    flex-direction: row; 
-    /* which means the top-left corner and bottom-left corner of the targeted element will have a radius of 30 pixels, while the top-right and bottom-right corners will have a radius of 0 pixels, resulting in a semi-circular shape. */
-    border-radius: 30px 0px;
-}
 
-/*Styling for quiz header text */
-.quiz .quiz_header h5 
-{
-    font-size: 2.12rem;
-    margin: 0 20px; 
-    color: #f8eee3;
-}
 
 /*Styling for timer container and */
 .quiz .quiz_header .timer

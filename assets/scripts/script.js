@@ -68,3 +68,30 @@ var questions = [
     },
 ]
 // =========================== End of question object ==================================================
+
+// =========================== Start button to  display quiz guide  ==================================================
+
+
+
+
+
+
+// =========================== End of  button to display quiz guide  ==================================================
+
+
+ // declare variable to hold init score of zero 
+var score = 0; 
+// variable used to track current question index number 
+var questionIndex = 0;
+// grab timer display div "time" used to show time 
+var timeRemaining = document.quereyselector
+// sets the value to the element on webpage with id "continu" to start the timer  
+// declares a variable and sets its div to the element on webpage to display quiz content 
+
+// variable to hold total quiz time
+// holds how much time has passed since timer started
+// holds penalty time, determine the penalty in seconds for a wrong answer
+// creats element with value to a new unordered list element created, used to create a list of choice
+
+// add an event listener to the timer to start click, when the event is triggered 
+    // check if the time
