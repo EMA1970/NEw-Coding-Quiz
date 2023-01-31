@@ -1,45 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
-/* font for heading */ 
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 /* font for time -> Teko  */ 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Teko:wght@300&display=swap');
 /* font for quiz questions */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 /* style for universal attributes - specific elements for all the HTML elements within web page  */
 * {
-    padding: 0px;
+    padding: 20px;
     margin: 10px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Permanent Marker';
     box-sizing: border-box;
+    font-family: 'Share Tech Mono', monospace;
 }
+
+/* color variables */
+:root {
+    /*yellow color */
+    --hue-neutral: 34;
+    --hue-wrong: 0;
+    --hue-correct: 120;
+}
+
 
 /* style for body attribute */
 body {
-    display: grid;
-    place-items: center;
+    /*css variables for setting colors */
+
+    --hue: var(--hue-neutral)
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    background: #ffb049
+    width: 100vw;
+    background-color: hsl(var(--hue-neutral), 100%, 50%);
+    font-family: 'Share Tech Mono', monospace;
+}   
+
+body.correct{
+    --hue: var(--hue-correct);
 }
 
-a {
-    text-decoration: none;
-    color: #f8eee3;
-    font-family: Radjdhan;
-  }
+body.wrong {
+    --hue: var(--hue-wrong);
 
-.container {
-    height: auto;
-    width: auto;
 }
-
 /* ============================             header section container styling       ============================ */ 
 .quiz_header {
     height: 70px; 
     width: auto; 
     background: #D52027;
-    position: absolute;
-    top: 0;
-    left: 0; 
     padding: 10px;
     display: flex; 
     align-items: center;
@@ -47,294 +55,177 @@ a {
     flex-direction: row; 
     /* which means the top-left corner and bottom-left corner of the targeted element will have a radius of 30 pixels, while the top-right and bottom-right corners will have a radius of 0 pixels, resulting in a semi-circular shape. */
     border-radius: 30px 0px;
+    justify-content: space-between;
+    
 }
 .quiz_header h5 
 {
-    font-size: 2.12rem;
+    font-size: 1.3rem;
     margin: 0 20px; 
     color: #f8eee3;
+}   
+
+.quiz_header .timer {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    justify-content: space-around;
+    align-items: center;
 }
-
-
-
-/* ============================             Guide section           ============================ */ 
-
-/* styles for the instruction box */
-.quiz_guide, .quiz 
+.quiz_header .timer h6 {
+     color: #f8eee3
+}
+/* ============================             quiz section           ============================ */ 
+/* styles for the CARD box */
+.container
 {
     height: auto;
-    width: auto;
+    width: 800px;
+    max-width: 80%;
     padding: 20px;
     background: #f8eee3;
     border-radius: 30px 10px;
     border: 2px solid #f8eee3;
     color: #D52027;
+    /* 10px blur, 2px spread */
     /* display: block; */
     /* display: none;  */
-}
+}    
 
-.quiz_guide {
-    margin: 50px
-}
 
-/* styles for the instruction text */
-div.quiz_guide h4 {
+.question-container {
+    top: 20px;
+    display: flex;
     height: auto;
-    width: 100%;
-    display: flex;
     align-items: center;
-    font-size: 1.5rem;
-}
-/* styling for button */ 
-.startbtn {
-    margin-top: 30px;
-    width: 300px;
-    height: 100px;
-    background: #ffb049;
-    color: #f8eee3;
-    font-size: 35px;
-    font-family: 'Rajdhani';
-    border: 2px dotted #D52027;
-    box-shadow: #D52027;
-}
+}    
 
-
-/* ============================             quiz section           ============================ */ 
-/* style for quiz container container */ 
-.quiz 
-{
-    /* display: block;  */
-    height: 480px;
-  /* poisition the box on the page as the user scrolls  */
+/* styles for quiz buttons container */
+.btn-grid {
+    display: grid;
+    /*gives it two columns, auto width makes the buttons as wide as it can be */
+    grid-template-columns: repeat(2, auto);
+    grid: 10px;
+    margin: 20px 0;
+    border-radius: 30px 10px;
     position: relative;
-}
+}    
 
-/*Styling for quiz header container size, color, and poisitioning */
-
-
-/*Styling for timer container and */
-.quiz .quiz_header .timer
-{
-    height: 50px;
-    width: auto;
-    background: #ffb049; 
+/* styles for quiz buttons */
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue-neutral), 100%, 30%);
+    background-color: hsl(var(--hue-neutral), 100%, 68%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px;
     color: #f8eee3;
-    border: 1px solid #f8eee3;
-    font-size: 1.35rem;
-    border-radius: 20px 5px;
-    display: flex;
-    /* elements will be placed left to right in a row */ 
-    flex-direction: row;
-    right: 10px;
-}
-/*Styling for options container */
-.quiz .quiz_header .timer h6
- {
-    font-size: 1.2rem;
-    display: grid; 
-    place-items: center;
-    margin: 0 10px;
-    font-family: 'Teko', sans-serif;
-    font-weight: lighter;
-}
-
-/*style for timer box with time display */
-.quiz .quiz_header .timer .time
-{
-    height: 40px;
-    width: 50px; 
-    align-self: center;
-    background: #f8eee3; 
-    color: #ffb049;
-    border: 1px solid #f8eee3;
-    border-radius: 15px 7px;
-    margin: 1px 0 1.5px 27px;
-    font-family: 'Teko', sans-serif;
-
-}
-
-/*Styling for question container parent element spacing */
-.quiz .questions 
-{
-    position: absolute; 
-    top: 90px;
-    display: flex; 
-    flex-direction: row;
+    outline: none;
+    font-family: 'Rajdhani';
+    border-radius: 25px 5px;
     
 }
 
-/*Styling for questions heading text */
-.quiz .questions h2
-{
-    font-size: 27px; 
-    color:#D52027;
-    font-family: 'Rajdhani', sans-serif;
-
-}
-/*Styling to create spacing between number and question text */
-.quiz .questions h2:first-child 
-{
-    margin: 0 10px 0 5px; 
-
-}
-/* ============================             quiz options section           ============================ */ 
-
-/*Styling for options container */
-.quiz .optionList
-{
-    height: 400px; 
-    width: 100%; 
-    position: absolute; 
-    top: 160px; 
-}
-
-/*Styling for answer options text */
-.quiz .optionList h4
-{
-    height: 50px;
-    width: 535px;
-    background: #ffb049;
-    line-height: 50px;
-    margin: 5px 0;
-    font-family: 'Rajdhani', sans-serif;
-    border-radius: 7px;
-    padding: 0 20px;
-    font-size: 20px;
+.btn:hover {
     color: #D52027;
-    overflow: hidden;
-    border: 1px solid #f8eee3;
     cursor: pointer;
+    filter: drop-shadow(0px 10px 10px #857a7a); 
+    transform: translate(10px);
+    transition: transform 150ms;
+    border: white;
 }
 
-/*Styling for users hovering over options text */
-.quiz .optionList h4:hover {
-    background: #D52027;
-    color: #f8eee3;
-}
 
-.quiz .optionList .active {
-    background: #D52027;
-    color: #f8eee3;
-}
+/* styles for buttons correct */
+#answer-buttons .btn.correct {
+   background-color: hsl(var(--hue-correct), 80%, 50%); 
+   color: grey;
+}   
+/* styles for buttons wrong */
+#answer-buttons .btn.wrong {
+    background-color: hsl(var(--hue-wrong), 100%, 30%);
+    color: grey;
+}    
 
-.quiz .optionList .disabled {
-    pointer-events: none;
-}
+/* styling for button */ 
+.start-btn, .next-btn, #highscores {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    
+}    
 
-/* ============================             quiz answers section           ============================ */ 
-/* bottom bar styling */
-.quiz .quiz_ans
+#question {
+    position: relative;
+}    
+
+/*wrappers for buttons  */
+.controls 
 {
-    height: 60px;
-    width: 89%;
-    background: #D52027;
-    position: absolute; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}    
+
+.hide {
+    display: none !important;
+}   
+
+i {
+    position: relative;
+    top: -0.1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* hud area timer and progress */ 
+
+#results {
+    display: flex;
+    justify-content: space-between;
+    background-color: #D52027;
+    align-items: center;
+    padding: 20px;
+    width: 88%;
+    height: 80px;
+    border-radius: 30px 5px;
+}
+
+.scores #progress{
+    display: flex; 
+    justify-content: space-around;
+    padding: 0px;
+    color: #f8eee3;
+}
+
+h6 {
+    padding: 0px;
+    color: #f8eee3;
+    text-align: center;
+}
+
+/*footer section */
+footer {
+    background-color: #D52027;
+    color: #f8eee3;
+    display: flex;
+    width: 800px;
+    max-width: 80%;
+    height: 50px;
+    padding: 0px;
+    position: relative; 
+    right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    border-radius: 30px 0;
-}
-/* bottom bar spacing for text  */
-.quiz .quiz_ans h3
-{
-    margin: 0px 30px; 
-    display: none; 
-}
-/* bottom bar styling for the next button */
-.quiz .quiz_ans h3:last-child 
-{
-    height: 40px; 
-    width: 100px; 
-    display: grid;
-    place-items: center; 
-    background: #ffb049;
-    position: absolute; 
-    right: 0;
-    color: #D52027;
-    border: 1px solid #f8eee3;
-    font-size: 18px;
-    border-radius: 20px 5px; 
-    cursor: pointer;
-    margin: 0 20px;
-}
-/* next button hover styling */
-.quiz .quiz_ans h3:hover 
-{
-    background: #f8eee3;
-    color: #D52027
-}
-/* question answer display hover styling */
-.quiz .quiz_ans h3:first-child:hover
-{
-    background: none;
-} 
-
-/* Result styling for container, set background size, and border.  */
-.result{
-    height: 500px; 
-    width: 450px;
-    padding: 20px; 
-    background: #D52027;
-    border-radius: 30px 10px;
-    border: 1px solid #ffb049;
-    overflow: hidden; 
-    position: relative;
-    display: none;
-}
-
-/*styling for results icon*/
-.quiz-content .result i {
-    font-size: 180px; 
-    color: #ffb049;
-    top: 30px; 
-    left: 120px;
-    position: absolute;
-}
-/* style edit for texts in results  */
-.quiz-content .result h6
-{
-    height: 400px;
-    width: 87%; 
-    font-size: 25px;
-    position: absolute; 
+    flex-direction: column; 
     text-align: center;
-    top: 235px;
-    color: #f8eee3;
+    line-height: 1.5em;
+    border-radius: 30px 5px;
 }
 
-/* style edit for points in results  */ 
-.quiz-content .result #points 
-{
-    font-size: 30px;
-    top: 275px;
+footer h4 {
+    justify-content: space-between;
+    
 }
-
-.quiz-content .result button
-{
-    height: 60px;
-    width: 260px; 
-    border: none; 
-    outline: none; 
-    background: #ffb049;
-    position: absolute; 
-    left: 125px;
-    top: 335px;
-    border: 1px solid #f8eee3;
-    border-radius: 20px 5px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.quiz-content .result button:last-child
-{
-    top: 405px;
-}
-
-.quiz-content .result button:last-child:hover
-{
-    background: #f8eee3;
-    color: #D52027;
-}
-

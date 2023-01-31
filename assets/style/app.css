@@ -1,0 +1,82 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+:root {
+    --hue-neutral: 34;
+}
+
+body {
+    background-color:  hsl(var(--hue-neutral), 100%, 50%);
+    font-family: 'Share Tech Mono', monospace;
+    margin: 10px;
+    text-align: center;
+    }
+  
+  form {
+    background-color: white;
+    padding: 20px;
+    border: 2px dotted #D52027 ;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 50%;
+    box-shadow: 2px 2px #D52027;
+  }
+  
+  label {
+    color: #D52027;
+    font-size: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 25px 5px;
+    border: none;
+    box-shadow: 2px 2px #D52027;
+  }
+  input[type="text"]:hover {
+    transition: translate(10px);
+    background-color: #e1a7a9;
+    cursor: pointer;
+  }
+
+
+.btn {
+    background-color: #D52027;
+    color: #f8eee3;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    
+}
+  
+input[type="submit"]:hover {
+    background-color: #f8eee3;
+    color: #D52027;
+}
+
+@media screen and (max-width: 750px){
+    
+label {
+        font-size: 15px;
+}
