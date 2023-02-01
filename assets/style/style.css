@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 /* style for universal attributes - specific elements for all the HTML elements within web page  */
 * {
-    padding: 20px;
     margin: 10px;
     font-family: 'Permanent Marker';
     box-sizing: border-box;
@@ -112,15 +111,16 @@ body.wrong {
 }    
 
 /* styles for quiz buttons */
-.btn {
+.btn, btn {
     --hue: var(--hue-neutral);
     border: 1px solid hsl(var(--hue-neutral), 100%, 30%);
     background-color: hsl(var(--hue-neutral), 100%, 68%);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     margin: 10px;
     color: #f8eee3;
     outline: none;
+    font-size: 1.5rem;
     font-family: 'Rajdhani';
     border-radius: 25px 5px;
     
@@ -147,13 +147,7 @@ body.wrong {
     color: grey;
 }    
 
-/* styling for button */ 
-.start-btn, .next-btn, #highscores {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    
-}    
+ 
 
 #question {
     position: relative;
@@ -208,24 +202,26 @@ h6 {
 
 /*footer section */
 footer {
-    background-color: #D52027;
-    color: #f8eee3;
+    background-color:  #f8eee3;
+    color: #D52027;
     display: flex;
     width: 800px;
     max-width: 80%;
-    height: 50px;
-    padding: 0px;
+    height: auto;
+    padding: 0px 0px;
     position: relative; 
+    top: 10px;
     right: 0;
     bottom: 0;
     left: 0;
     flex-direction: column; 
     text-align: center;
-    line-height: 1.5em;
-    border-radius: 30px 5px;
-}
-
-footer h4 {
-    justify-content: space-between;
+    line-height: 1em;
+    border: 2px dotted;
+    border-radius: 10px;
     
+}
+footer h4 .icon, footer h4 {
+    padding: 0px;
+    font-size: .8rem;
 }
