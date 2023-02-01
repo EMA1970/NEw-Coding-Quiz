@@ -30,6 +30,7 @@ Developers may copy this repo and clone  into code editor (e.g. visual studio).
 Users must be connected to the internet, then navigate to the deployed GITHUB url to access the application content. 
 
 ## Deployed Application URL 
+https://ema1970.github.io/NEw-Coding-Quiz/
 
 ## Screenshots 
 
