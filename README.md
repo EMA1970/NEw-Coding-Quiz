@@ -6,7 +6,7 @@
   - [Development](#development)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Screen Shots](#screen-shots)
+  - [Screenshots](#Screenshots)
   - [Contribution](#contribution)
   - [License](#license)
 
