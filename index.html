@@ -8,7 +8,7 @@
     <title>Web Development Quiz</title>
     <!-- link for icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    
+
     <!--link for normalize reset-->
     <link rel="stylesheet" href="./assets/style/normalize.css">
     <!--link for stylesheet -->
@@ -17,7 +17,7 @@
 
 <body>
     <!-- body content -->
-    <section class="container" >
+    <section class="container">
         <header class="quiz_header" id="quizHeader">
             <h5>Cool Coders Quiz </h5>
 
@@ -25,7 +25,7 @@
                 <h6 id="time-sec">00</h6>
                 <h6 id="time-txt">secs</h6>
             </div>
-    
+
         </header>
         <!-- quiz instructions -->
         <div id="quiz_info" class="">
@@ -35,13 +35,14 @@
                 <div class="info">2. If answer is wrong, 10 secs are subtracted</div>
                 <div class="info">3. Every correct answer will count as 1 point.</div>
                 <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-                <div class="info">5. Finish all questions before timer ends to log score into the high scores page.</div>
+                <div class="info">5. Finish all questions before timer ends to log score into the high scores page.
+                </div>
             </div>
         </div>
         <!-- questions & answers -->
         <div id="question-container" class="hide">
             <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid"> 
+            <div id="answer-buttons" class="btn-grid">
                 <button class="btn" data-number="1">Answer 1</button>
                 <button class="btn" data-number="2">Answer 2</button>
                 <button class="btn" data-number="3">Answer 3</button>
@@ -50,8 +51,8 @@
         </div>
         <!-- buttons controls -->
         <div class="controls">
-            
-            <a href="highscore.html" id= "highscoresBtn" class="btn"> <i class="uil uil-medal"></i> Highscores </a> 
+
+            <a href="highscore.html" id="highscoresBtn" class="btn"> <i class="uil uil-medal"></i> Highscores </a>
             <button id="start-btn" class="start-btn btn"><i class="uil uil-play"></i> Start </button>
             <button id="next-btn" class="next-btn btn hide"> Next </button>
         </div>
@@ -63,17 +64,17 @@
                 <h6 id="points">0</h6>
             </div>
             <div id="progress">
-                <h6 class="answered-qs"> Questions </h6> 
+                <h6 class="answered-qs"> Questions </h6>
                 <h6 id="current_q"> </h6>
 
             </div>
         </div>
     </section>
     <footer>
-        <h4> &copy; Eileen Ma | 2023 </h4> 
+        <h4> &copy; Eileen Ma | 2023 </h4>
         <h4>
             Github
-            <i class="uil uil-github-alt icon" ><a href="https://github.com/ema1970"></a></i>
+            <i class="uil uil-github-alt icon"><a href="https://github.com/ema1970"></a></i>
         </h4>
     </footer>
 
