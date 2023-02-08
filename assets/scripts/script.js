@@ -504,6 +504,7 @@ function startTimer() {
     if (timeLeft <= 0) {
         clearInterval(timer);
         endQuiz();
+    } else {
     }
   }, 1000);
 }
@@ -561,13 +562,17 @@ function selectAnswer(e) {
     })
     if (correct) {
         addPoints();
+    } else {
+        timeLeft = timeLeft - 10;
+        console.log(timeLeft)
     }
     // if we are not on the last question 
-    if (shuffledQuestions.length > currentQuestionIndex + 1){
+    if (shuffledQuestions.length >= currentQuestionIndex){
         nextButton.classList.remove('hide')
     } else {
-       // save item to local storage 
-       localStorage.setItem('mostRecentScore', pointsIndex) 
+        // save item to local storage 
+        localStorage.setItem('mostRecentScore', pointsIndex) 
+        console.log(true)
         return window.location.assign('/end.html')
 
     }
@@ -596,4 +601,7 @@ function clearStatusClass (element) {
 function endQuiz () {
     questionContainerEl.classList.add('hide')
     highscores.classList.remove('hide')
+    localStorage.setItem('mostRecentScore', pointsIndex) 
+    console.log(true)
+    return window.location.assign('/end.html')
 }
